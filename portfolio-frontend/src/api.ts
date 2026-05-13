@@ -1,7 +1,13 @@
 import type { ApiResponse, PortfolioProject } from './types';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') ?? '';
+
+function buildApiUrl(path: string): string {
+  return `${API_BASE_URL}${path}`;
+}
+
 async function request<T>(url: string): Promise<T> {
-  const response = await fetch(url);
+  const response = await fetch(buildApiUrl(url));
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}`);
   }
@@ -20,4 +26,3 @@ export function listProjects(): Promise<PortfolioProject[]> {
 export function getProject(id: number): Promise<PortfolioProject> {
   return request<PortfolioProject>(`/api/portfolio/projects/${id}`);
 }
-

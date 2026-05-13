@@ -42,6 +42,12 @@ npm run dev
 
 前端开发服务器会把 `/api` 代理到 `http://localhost:9090`。
 
+默认情况下前端使用相对路径 `/api` 请求后端。如果需要绕过 Vite/Nginx 代理，也可以在 `portfolio-frontend/.env` 中指定后端地址：
+
+```bash
+VITE_API_BASE_URL=http://localhost:9090
+```
+
 如果暂时没有启动后端和 MySQL，可以另开一个终端运行前端 mock API：
 
 ```bash
