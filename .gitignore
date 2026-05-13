@@ -1,0 +1,37 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+.codex/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node / frontend
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+portfolio-frontend/node_modules/
+portfolio-frontend/dist/
+portfolio-frontend/*.tsbuildinfo
+
+# Java / Maven
+.m2/
+target/
+portfolio-backend/target/
+
+# Runtime temp files
+*.tmp
+*.temp

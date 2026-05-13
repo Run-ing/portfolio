@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-frontend",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "mock": "node mock-api.cjs",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "lucide-vue-next": "^0.468.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.1.10"
+  },
+  "devDependencies": {}
+}
