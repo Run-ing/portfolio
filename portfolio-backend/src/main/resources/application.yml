@@ -1,12 +1,12 @@
 server:
-  port: 9090
+  port: ${SERVER_PORT:9090}
 
 spring:
   application:
     name: portfolio-backend
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DB_HOST:8.136.9.247}:${DB_PORT:13306}/${DB_NAME:lzf_studio}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:lzf_studio}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:root}
   jackson:
@@ -19,4 +19,3 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
-
